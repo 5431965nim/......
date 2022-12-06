@@ -6,5 +6,44 @@
 
 @mixin button ($type:border, $width: null, $gap: null){
     height: 42px;
-    
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.28;
+    color: #000000;
+    border:none;
+    outline:none;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 0;
+    cursor: pointer;
+    @if $gap{
+        gap: $gap;
+    }
+    @include flex_center();
+
+    @if $width{
+        width: $width;
+    }
+    @if $type==border{
+        border: 2px solid var(--btn-default-color);
+        &:focus{
+            border: 2px solid var(--btn-hover-focus-color);
+            color: #fcfcfc;
+        }
+        &:hover{
+            border: 2px solid var(--btn-hover-focus-color);
+        }
+    }
+    @if $type==bgc {
+        background-color: var(--btn-default-color);
+        &:focus{
+            border: 2px solid var(--btn-hover-focus-color);
+            color: #fcfcfc;
+        }
+        &:hover{
+            border: 2px solid var(--btn-hover-focus-color);
+        }
+    }
+  
 }
