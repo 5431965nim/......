@@ -1,0 +1,10 @@
+@mixin flex_center($display:flex){
+ display:$display;
+ justify-content: center;
+ align-items: center;   
+}
+
+@mixin button ($type:border, $width: null, $gap: null){
+    height: 42px;
+    
+}
