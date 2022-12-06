@@ -1,0 +1,15 @@
+.logo__button{
+    @include button(border, 134px);
+}
+.address__button{
+    @include button(bgc, 164px, 4px);
+}
+.address__location{
+    @include button(bgc, 196px, 4px);
+}
+.address__franchise{
+    @include button(border, 196px, 4px);
+}
+.address__buy{
+    @include button(bgc, 152px, 4px);
+}
